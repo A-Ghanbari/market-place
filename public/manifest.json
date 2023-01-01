@@ -1,15 +1,30 @@
 {
-  "short_name": "Shavaz Seller Panel",
-  "name": "Shavaz Seller Panel",
+  "name": "simple market place",
+  "short_name": "marketPlace",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/images/app-icon-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/images/app-icon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/images/app-icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
     }
   ],
-  "start_url": ".",
+  "start_url": "/index.html",
+  "scope": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait-primary",
+  "background_color": "#fff",
+  "theme_color": "#fcaec2",
+  "description": "A simple Market Place, implementing a lot of PWA love.",
+  "dir": "ltr",
+  "lang": "en-US"
 }
