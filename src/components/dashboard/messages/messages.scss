@@ -1,0 +1,60 @@
+@use '/src/assets/sass/mixins';
+
+.notification {
+    row-gap: 0 !important;
+    .aside  .ant-row{
+        @media (max-width:767px) {
+            row-gap: 0 !important;
+        }
+    }
+}
+.notification-filter{
+    @include mixins.flex($justify: space-between, $align: center);
+    flex-wrap: wrap;
+    .filter-switch{
+        @media (max-width:620px) {
+            margin-bottom: 10px;
+        }
+        @include mixins.flex($justify: space-between, $align: center);
+        h4{
+            margin: 0 10px;
+        }
+    }
+}
+.list-header{
+    width: 100%;
+    @include mixins.flex($justify: space-between, $align: center);
+    flex-wrap: wrap;
+    :nth-child(1){
+        background-color: rgba(239,86,97,.09);
+        color: #ef5661;
+        padding:1px 10px;
+        border-radius: 10px;
+    }
+}
+.messages{
+    .ant-list-item{
+        border-bottom: none !important;
+        padding: 16px 8px 0 !important;
+    }
+    .ant-collapse {
+        border-radius: 6px;
+        &:hover{
+            box-shadow:0 0 12px 0 rgb(0 0 0 / 10%);
+        }
+        .ant-collapse-header {
+            border-bottom: none !important;
+            display: contents !important;
+        }
+        .ant-collapse-content {
+            border-top: none !important;
+        }
+        .ant-collapse-item {
+            border-bottom: 1px solid #efefef !important;
+        }
+        .ant-collapse-content-box{
+            padding: 8px 60px !important;
+            font-size: 1.1em;
+        }
+    }
+}

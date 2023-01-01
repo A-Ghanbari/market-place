@@ -1,0 +1,21 @@
+printf "
+---
+apiVersion: v1
+kind: Config
+current-context: $K8S_CLUSTER_NAME
+contexts:
+- name: $K8S_CLUSTER_NAME
+  context:
+    cluster: $K8S_CLUSTER_NAME
+    namespace: $K8S_NAMESPACE
+    user: $K8S_USER_NAME
+clusters:
+- name: $K8S_CLUSTER_NAME
+  cluster:
+    server: $K8S_CLUSTER_ENDPOINT
+    certificate-authority-data: $K8S_CLUSTER_CERT
+users:
+- name: $K8S_USER_NAME
+  user:
+    token: $K8S_USER_TOKEN
+"

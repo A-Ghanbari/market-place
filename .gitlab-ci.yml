@@ -1,0 +1,60 @@
+image: registry.mn.nafis.cloud/mirror/docker:20.10.19-dind
+services:
+  - docker:dind
+stages:
+  - Build
+  - Deploy
+  - Rollback
+
+Build Production:
+  stage: Build
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    GIT_STRATEGY: fetch
+  only:
+    - production
+  when: manual
+  allow_failure: false
+  tags:
+    - builder
+  before_script:
+    - docker login --username "$REGISTRY_USER" --password "$REGISTRY_PASS" "$REGISTRY_ADDR"
+  script:
+    - VERSION="${CI_COMMIT_SHA:0:8}"
+    - echo "VERSION is ${CI_COMMIT_SHA:0:8}"
+    - echo "Building $REGISTRY_ADDR/$REPO_ORG/$REPO_GROUP/$REPO_NAME:${CI_COMMIT_SHA:0:8} Docker Image"
+    - docker build --rm -t "$REGISTRY_ADDR/$REPO_ORG/$REPO_GROUP/$REPO_NAME:${CI_COMMIT_SHA:0:8}" -t "$REGISTRY_ADDR/$REPO_ORG/$REPO_GROUP/$REPO_NAME:latest" .
+    - echo "Pushing $REGISTRY_ADDR/$REPO_ORG/$REPO_GROUP/$REPO_NAME:${CI_COMMIT_SHA:0:8} Docker Image to Docker Registry"
+    - docker push "$REGISTRY_ADDR/$REPO_ORG/$REPO_GROUP/$REPO_NAME:${CI_COMMIT_SHA:0:8}"
+    - docker push "$REGISTRY_ADDR/$REPO_ORG/$REPO_GROUP/$REPO_NAME:latest"
+
+Deploy Production (Swarm):
+  stage: Deploy
+  only:
+    - production
+  when: manual
+  tags:
+    - deployer-swarm
+  before_script:
+    - docker login --username "$REGISTRY_USER" --password "$REGISTRY_PASS" "$REGISTRY_ADDR"
+  script:
+    - VERSION="${CI_COMMIT_SHA:0:8}"
+    - echo "VERSION is ${CI_COMMIT_SHA:0:8}"
+    - mkdir -p /$BASE_DIR/$REPO_ORG/$REPO_GROUP/$REPO_NAME
+    - /bin/bash deployment/swarm/production.yml > /$BASE_DIR/$REPO_ORG/$REPO_GROUP/$REPO_NAME/production.yml
+    - docker stack deploy --with-registry-auth -c /$BASE_DIR/$REPO_ORG/$REPO_GROUP/$REPO_NAME/production.yml $REPO_ORG-$REPO_GROUP-$REPO_NAME-prod
+
+Rollback Production (Swarm):
+  stage: Rollback
+  only:
+    - production
+  when: manual
+  tags:
+    - deployer-swarm
+  script:
+    - docker service rollback $REPO_ORG-$REPO_GROUP-$REPO_NAME-prod_server
+
+
+
+
+

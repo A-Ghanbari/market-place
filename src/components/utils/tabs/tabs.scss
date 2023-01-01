@@ -1,0 +1,25 @@
+
+.ant-tabs-tab:hover {
+    color: #777 !important;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--fail-color) !important;
+    text-shadow: 0 0 .25px currentcolor;
+    font-size: 1.1em !important;
+    font-weight: 500 !important;
+}
+.ant-tabs-tab-btn {
+    font-size: 1.1em !important;
+    font-weight: 500 !important;
+}
+.ant-tabs-tab-active{
+    border-bottom: 2px solid var(--fail-color) !important;
+}
+.ant-tabs-nav{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 36px !important;
+}
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-ink-bar, .ant-tabs-top>.ant-tabs-nav:before, .ant-tabs-top>div>.ant-tabs-nav .ant-tabs-ink-bar, .ant-tabs-top>div>.ant-tabs-nav:before {
+    bottom: 0;
+    display: none !important;
+}

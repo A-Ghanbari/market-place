@@ -1,0 +1,103 @@
+@use '/src/assets/sass/mixins';
+
+.ant-input , textarea .ant-input{
+    background-color: #00000000 !important;
+    color: var(--section-font-color) !important;
+}
+
+.ant-input-affix-wrapper ,.ant-input-textarea{
+    @include mixins.input;
+    @include mixins.input-focus
+}
+
+ .ant-input-password , .input {
+    transition: none !important;
+    @include mixins.input-focus
+}
+
+textarea{
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    min-height: 38px !important;
+}
+.ant-input-textarea-show-count:after{
+    color: #777 !important;
+    margin: 0 !important;
+}
+.ant-input-textarea{
+    height: auto !important;
+    padding-left: 0 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--section-font-color) !important;
+    transition: background-color 9000s ease-in-out 0s;
+}
+
+.ant-input-search{
+   max-width: 250px;
+   background-color: var(--section-background-color) !important;
+   border: var(--section-border);
+   border-radius: 50px;
+   .ant-input{
+       border-radius: 50%;
+       border: none;
+       background-color: #00000000;
+       color: var(--accent-color);
+       &:focus-within{
+           box-shadow: none;
+        }
+   }
+   .ant-input-group-addon{
+           background-color: #00000000;
+       .ant-input-search-button{
+           background-color: #00000000;
+           border: none ;
+           
+           .anticon-search{
+               color: var(--accent-color);
+           }
+        }
+    }
+}
+.ant-input-clear-icon{
+    color: var(--fail-color) !important;
+    padding-top: 4px !important;
+}
+.ant-input-prefix{
+    color: #E6E9ED !important;
+    position: absolute;
+    left: 12px;
+    top: 25%;
+}
+.ant-input-affix-wrapper:before {
+    width: 0;
+    visibility: visible !important;
+    margin: -5px 15px;
+    border-left: 1px solid #E6E9ED;
+}
+.ant-input-affix-wrapper:focus-within {
+    &::before {
+        border-left: 1px solid var(--fail-color) !important;
+    }
+}
+.ant-input-suffix a{
+    color:#bbb !important;
+    height: 24px;
+}
+.ant-input-affix-wrapper-disabled{
+    background-color: #eee !important;
+    input{
+        color: #777 !important;
+    }
+}
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input, .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+    border-color: #ff4d4f !important;
+}
+.num-input{
+    direction: ltr !important;
+}

@@ -1,0 +1,45 @@
+@use '/src/assets/sass/mixins';
+
+.ant-radio-checked .ant-radio-inner {
+    border-color: var(--success-color) !important;
+}
+.ant-radio-inner:after {
+    background-color: var(--success-color) !important;
+}
+.ant-radio:hover .ant-radio-inner {
+    border-color: var(--success-color) !important;
+}
+.ant-radio-group-solid {
+    display: flex !important;
+    label{
+        flex-grow: 1 !important;
+        text-align: center !important;
+        height: 50px !important;
+        line-height: 15px;
+        @include mixins.flex($direction: column);
+        &:first-child{
+            border-top-right-radius: 6px !important;
+            border-bottom-right-radius: 6px !important;
+        }
+        &:last-child{
+            border-top-left-radius: 6px !important;
+            border-bottom-left-radius: 6px !important;
+        }
+    }
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):before {
+    background-color: var(--fail-color) !important;
+}
+.ant-radio-button-wrapper:hover {
+    color: var(--secondary-font-color) !important;
+}
+.ant-radio-button-wrapper-checked{
+    background-color: var(--fail-color) !important;
+    border-color: var(--fail-color) !important;
+}
+.ant-radio-button-wrapper-checked:hover{
+    color: #ffffff !important;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+    box-shadow: 0 0 3px 0.1px var(--fail-color) !important;
+}

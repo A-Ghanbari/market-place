@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "IRANYekan";
+  src: url("/assets/fonts/iranyekanwebregularfanum.ttf");
+}
+@font-face {
+  font-family: "Kalameh";
+  src: url("/assets/fonts/KalamehWebFaNum-Regular.woff");
+}
+
+:root {
+  --accent-color: #2A84FE;
+  --accent-light-color: #f0f7ff;
+  --warning-color: #FEB02A;
+  --warning-light-color: #fff5e4;
+  --success-color: #06D7A0;
+  --success-light-color: #ebfffa;
+  --fail-color: #F04770;
+  --fail-light-color: #ffeff3;
+
+  --sidebar-background-color: #E55276;
+  --sidebar-text-color: #fcaec2;
+  --sidebar-text-active-color: #fff;
+  --sidebar-text-hover-color: #ffd6e0;
+  --sidebar-border-color: #fff;
+
+  --content-background-color: #FBF8F9;
+
+  --login-background-color: #cfcfcf;
+  --header-background-color: #fdfdff;
+  --sidebar-header-background-color: #5d1270;
+  --primary-background-color: #f1d4d4;
+  --section-background-color: #fff;
+  --font-color:#606265;
+  --primary-font-color: #f2faff;
+  --secondary-font-color: #a5a5a5;
+  --section-font-color: #000000;
+
+  --widgets-text-color: #000000;
+  --notfound-primary-color: #5d1270;
+  --notfound-secondary-color: #7f2396;
+  --table-header-background-color: #7f2396;
+  --table-row-background-color: #fcedfd;
+  --table-row-odd-background-color: #fff;
+  --table-border-color: #410a4e;
+  --table-text-color: #000;
+  --collapse-header-background-color:#fdfdff;
+  --collapse-background-color:#fff;
+  --card-background-color: #ffffff;
+  --card-head-background-color: #410a4e;
+  --card-border-color: #410a4e;
+  --card-font-color: #000000;
+  --card-post-img: brightness(40%);
+  --main-box-shadow: 0px 0px 6px 1px #000000c5;
+  --section-box-shadow: -2px 2px 5px 1px #808080;
+  --section-border: 1px solid #c2c2c2;
+  --pagination-background-color: #fff;
+  --pagination-font-color: #000;
+  --pagination-active-color: #7f2396;
+  --dark-bold:300;
+  --descriptions-border-color:#F0F0F0;
+  --descriptions-item-background-color:#f8f8f8;
+  --select-background-color:#fdf6ff;
+  --current-bar-color:#9638ad;
+  --last-bar-color:#380544;
+  --chart-tooltip-background-color:#f8f8f8;
+  --chart-brush-background-color:#faedff;
+  --chart-brush-color:#380544;
+}
+
+body {
+  font-family: Kalameh;
+  font-size: 14px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  direction: ltr;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000000 ;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BEC4CB;
+  border-radius: 4px;
+}

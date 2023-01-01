@@ -1,0 +1,17 @@
+printf "
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: $DEPLOYMENT_NAME
+  name: $DEPLOYMENT_NAME
+spec:
+  ports:
+  - name: \'$DEPLOYMENT_PORT\'
+    port: $DEPLOYMENT_PORT
+    protocol: TCP
+    targetPort: $DEPLOYMENT_PORT
+  selector:
+    app: $DEPLOYMENT_NAME
+"

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_45" data-name="Group 45" transform="translate(-422 -1146)">
+    <g id="Add" transform="translate(423 1147)">
+      <path id="Path_10" data-name="Path 10" d="M1,16a37.954,37.954,0,0,0,.629,7.946,8.444,8.444,0,0,0,2.1,4.325,8.445,8.445,0,0,0,4.325,2.1A37.962,37.962,0,0,0,16,31a37.961,37.961,0,0,0,7.946-.629,8.445,8.445,0,0,0,4.325-2.1,8.445,8.445,0,0,0,2.1-4.325A37.961,37.961,0,0,0,31,16a37.962,37.962,0,0,0-.629-7.946,8.445,8.445,0,0,0-2.1-4.325,8.444,8.444,0,0,0-4.325-2.1A37.954,37.954,0,0,0,16,1a37.955,37.955,0,0,0-7.946.629,8.445,8.445,0,0,0-4.325,2.1,8.445,8.445,0,0,0-2.1,4.325A37.955,37.955,0,0,0,1,16Z" transform="translate(-1 -1)" fill="none" stroke="#06d7a0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <path id="Right_Arrow_2" data-name="Right Arrow 2" d="M14.649,1.19l6.818,6.818m0,0H5.558L5.858,0,0,.177M21.467,8.008l-6.818,6.818" transform="translate(423.508 1165.167) rotate(-45)" fill="none" stroke="#06d7a0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

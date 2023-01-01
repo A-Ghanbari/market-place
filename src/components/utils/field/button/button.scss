@@ -1,0 +1,47 @@
+.button{
+    color: #fff !important;
+    min-width: 96px;
+    min-height: 40px;
+    cursor: pointer;
+    border-radius: 8px !important;
+    margin: 16px 0;
+    border: none !important;
+    font-size: 1.2em;
+    background: var(--success-color) !important;
+    transition: none !important;
+    
+}
+.button-primary-accent{
+    background: var(--accent-color) !important;
+}
+.button-primary-warning{
+    background: var(--warning-color) !important;
+}
+.button-primary-success{
+    background: var(--success-color) !important;
+    color: #fff !important;
+}
+.button-primary-fail{
+    background: var(--fail-color) !important;
+    color: #fff !important;
+}
+.button-secondary-accent{
+    background: #00000000 !important;
+    color: var(--accent-color) !important;
+    border:1px solid var(--accent-color) !important;
+}
+.button-secondary-warning{
+    background: #00000000 !important;
+    color: var(--warning-color) !important;
+    border:1px solid var(--warning-color) !important;
+}
+.button-secondary-success{
+    background: #00000000 !important;
+    color: var(--success-color) !important;
+    border:1px solid var(--success-color) !important;
+}
+.button-secondary-fail{
+    background: #00000000 !important;
+    color: var(--fail-color) !important;
+    border:1px solid var(--fail-color) !important;
+}

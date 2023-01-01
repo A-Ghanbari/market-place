@@ -1,0 +1,82 @@
+@use '/src/assets/sass/mixins';
+
+.pagination{
+    @include mixins.flex($justify: flex-end, $align: center);
+    flex-wrap: wrap;
+    flex-grow: 2;
+    h4{
+        margin: 0 16px;
+    }
+    .ant-pagination{
+        margin: 10px 0 !important;
+        li , li button , li div ,li a , li a div span{
+            transition: none !important;
+            box-shadow: none !important;
+            border-radius: 4px;
+            &:hover{
+                color: #000 !important;
+                border-color: var(--fail-color) !important;
+                font-weight: bold;
+                transition: none !important;
+            }
+            .ant-select{
+                .ant-select-selector {
+                    @include mixins.input;
+                    @include mixins.input-focus;
+                    height: 30px !important;
+                    margin: 0 !important;
+                    padding: 4px !important;
+                    .ant-select-selection-item {
+                        padding: 0 !important;
+                        margin-left: 22px;
+                    }
+                }
+                .ant-select-dropdown{
+                    border-radius: 10px;
+                    box-shadow: 0 3px 6px 2px rgb(0 0 0 / 12%) !important;
+                    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+                        background-color:var(--fail-light-color) !important;
+                    }
+                    
+                    .ant-select-item{
+                        color: #000 !important;
+                        transition: none !important;
+                    }
+                    .ant-select-item-option-active {
+                        background-color: var(--content-background-color) !important;
+                        transition: none !important;
+                    }
+                }
+            }
+        }
+        .ant-pagination-options {
+            .ant-select , .ant-select-selector{
+                margin: 0 !important;
+            }
+        }
+        .ant-pagination-item-active {
+            border: 1px solid var(--fail-color) !important;
+            a{
+                border-radius: 0;
+                color: var(--primary-font-color) !important;
+                background-color:var(--fail-color) !important;
+                box-shadow: 0 6px 12px 0 rgba(255, 142, 198, 0.3) !important;
+                &:hover{
+                    color: var(--primary-font-color) !important;
+                }
+            }
+        }
+        .ant-select-selector{
+            border: none !important;
+            .ant-select-selection-item{
+                transition: none !important;
+            }
+        }
+        .ant-select-arrow{
+            color: #000 !important;
+        }
+        .ant-pagination-item-link-icon{
+            color: var(--fail-color) !important;
+        }
+    }
+}

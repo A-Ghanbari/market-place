@@ -1,0 +1,61 @@
+@use '/src/assets/sass/mixins';
+
+.form-item {
+    position: relative;
+    width: 100%;
+
+    .ant-form-item-label {
+        position: absolute !important;
+        top: -5px !important;
+        right: 8px;
+        z-index: 1;
+        width: 100%;
+
+        >label {
+            font-size: .9em;
+            height: 20px;
+            color: #000;
+            padding: 2px;
+            user-select: none;
+            width: 100%;
+
+            >div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 16px;
+
+                >div {
+                    cursor: pointer;
+                    color: #1890ff;
+                }
+            }
+
+        }
+
+        >label::after,
+        >label::before {
+            content: none !important;
+        }
+    }
+
+    .form-item-radio {
+        margin-top: 18px !important;
+
+        label {
+            height: 50px !important;
+            line-height: 15px;
+            @include mixins.flex($direction: column);
+        }
+    }
+
+    .form-item-switch {
+        margin-top: 32px !important;
+        margin-right: 8px !important;
+    }
+}
+
+.ant-form-item {
+    margin: 0;
+}

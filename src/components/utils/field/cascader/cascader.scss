@@ -1,0 +1,49 @@
+@use '/src/assets/sass/mixins';
+
+.cascader{
+    .ant-select-selector {
+        @include mixins.input ;
+        @include mixins.input-focus;
+        .ant-select-selection-item {
+            padding: 8px 0 !important;
+            }
+        }
+        .ant-select-arrow {
+            top: 40px !important;
+        }
+        .ant-select-selection-search-input{
+            padding-top: 16px !important;
+        }
+        .ant-select-clear{
+            display: none !important;
+        }
+        .ant-select-selection-placeholder{
+            padding-top: 8px !important;
+    }
+}
+.ant-cascader-dropdown{
+    border-radius: 10px !important;
+    min-height: 200px;
+    .ant-cascader-menu{
+        min-height: 200px;
+        border: none !important;
+        .ant-cascader-menu-item{
+            &:hover{
+                background-color: var(--content-background-color) !important;
+            }
+            .anticon-left{
+                svg{
+                    color: var( --section-font-color) !important;
+                }
+            }
+        }
+        .ant-cascader-menu-item-active{
+            background-color:var(--fail-light-color) !important;
+            .anticon-left{
+                svg{
+                    color: var( --primary-font-color) !important;
+                }
+            }
+        }
+    }
+}

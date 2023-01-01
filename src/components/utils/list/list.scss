@@ -1,0 +1,26 @@
+@use '/src/assets/sass/mixins';
+
+.ant-list{
+    .ant-list-items{
+        margin-bottom: 20px !important;
+    }
+    .ant-list-item{
+        border-bottom: 1px solid rgb(241, 240, 240) !important;
+        .ant-list-item-meta-content{
+            .ant-list-item-meta-description{
+                color: #888 !important;
+            }
+        }
+        .ant-list-item-meta-avatar{
+            margin: auto 8px !important;
+            svg{
+
+                @include mixins.flex($justify: center ,$align:center);
+                color: #888 !important;
+            }
+        }
+    }
+}
+.ant-list-vertical .ant-list-item {
+    flex-wrap: wrap !important; 
+}

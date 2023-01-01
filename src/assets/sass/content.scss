@@ -1,0 +1,15 @@
+@use '/src/assets/sass/mixins';
+
+.ant-layout-content {
+    color: var(--section-font-color);
+    background-color: #FBF8F9;
+    width: 100%;
+}
+.content-wrapper{
+    margin: 0 auto;
+    max-width: 1480px ;
+    padding: 20px 40px;
+    @media screen and(max-width:767px) {
+        padding: 20px 15px;
+    }
+}

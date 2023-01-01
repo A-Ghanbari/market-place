@@ -1,0 +1,132 @@
+@use '/src/assets/sass/mixins';
+
+.profile{
+    row-gap: 0 !important;
+    .aside  .ant-row{
+        @media (max-width:767px) {
+            row-gap: 0 !important;
+        }
+    }
+}
+.profile-tab-title{
+    @include mixins.flex($justify: space-between, $align: center);
+    margin-bottom: 24px;
+    h3{
+        background-color: #FAFAFA;
+        flex-grow: 2;
+        margin-left: 8px;
+        padding: 8px;
+        margin-bottom: 0;
+        border-radius: 10px;
+    }
+}
+.profile-seller-status-success{
+    margin: 30px 0;
+    div{
+        position: relative;
+        border: 1px solid rgba(47, 211, 110, 0.1);
+        background-color: rgba(47, 211, 110, 0.05);
+        max-width: 370px;
+        min-width: 200px;
+        padding: 15px;
+        padding-right: 50px;
+        border-radius: 10px;
+        font-size: 1.2em;
+        span{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #56ef96;
+            top: 20px;
+            right: 20px;
+        }
+    }
+}
+
+.profile-seller-status-fail{
+    margin: 30px 0;
+    div{
+        position: relative;
+        border: 1px solid rgba(211,47,47,.1);
+        background-color: rgba(211,47,47,.05);
+        max-width: 370px;
+        min-width: 200px;
+        padding: 15px;
+        padding-right: 50px;
+        border-radius: 10px;
+        font-size: 1.2em;
+        span{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ef5661;
+            top: 20px;
+            right: 20px;
+        }
+    }
+}
+.profile-upload{
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-left: 10px;
+    &::before{
+        font-family: fontawesome;
+        content: "\f0aa";
+        color: var(--accent-color);
+        font-size: 2em;
+    }
+}
+.profile-info{
+    background-color: rgba(79,204,233,.05);
+    border: 1px solid rgba(79,204,233,.2);
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    p{
+        font-size: 0.9em;
+        margin: 0;
+    }
+}
+.upload-form{
+    margin: 30px 0;
+    .upload-card-footer{
+        @include mixins.flex($justify: space-between, $direction:column);
+        flex-wrap: wrap;
+        .action-button{
+            flex-grow: 2;
+            @media screen and (min-width:650px) {
+                text-align: left !important;
+            }
+        }
+    }
+}
+.calendar-table-filter{
+    @include mixins.flex($justify: flex-start, $align: center);
+    margin: 30px 0;
+    h5{
+        margin-left: 30px;
+    }
+}
+.work-calendar{
+    .fc{
+        .fc-daygrid-body{
+            padding: 8px;
+        }
+        .fc-daygrid-day-top {
+            @include mixins.flex($justify: center, $align: center);
+        }
+        .fc-daygrid-day-frame:hover {
+            box-shadow: 0 0 3px 1px #eee;
+            border-radius: 10px;
+        }
+    }
+}
+
+.profile-address{
+    .leaflet-container{
+        height: 350px !important;
+    }
+}

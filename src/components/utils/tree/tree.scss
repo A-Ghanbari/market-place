@@ -1,0 +1,27 @@
+// ant-tree-node-content-wrapper ant-tree-node-content-wrapper-normal
+// ant-tree-node-content-wrapper ant-tree-node-content-wrapper-open
+
+
+.ant-tree-node-content-wrapper-normal{
+    color: var(--secondary-font-color) !important;
+    transition: none !important;
+
+}
+.ant-tree-node-content-wrapper-open{
+    color: var(--font-color) !important;
+    transition: none !important;
+
+}
+.ant-tree-node-content-wrapper-close{
+    color: var(--font-color) !important;
+    transition: none !important;
+
+}
+.ant-tree-node-content-wrapper:hover{
+    color: var(--fail-color) !important;
+    background-color: #00000000 !important;
+    transition: none !important;
+}
+.ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
+    background-color: #00000000 !important;
+}

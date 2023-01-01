@@ -1,0 +1,38 @@
+printf "
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $DEPLOYMENT_NAME
+spec:
+  replicas: $DEPLOYMENT_REPLICAS
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: $DEPLOYMENT_NAME
+  template:
+    metadata:
+      labels:
+        app: $DEPLOYMENT_NAME
+    spec:
+      containers:
+      - env:
+        - name: TZ
+          value: Asia/Tehran
+        image: $REGISTRY_ADDR/$REPO_PATH:${CI_COMMIT_SHA:0:8}
+        imagePullPolicy: IfNotPresent
+        name: $DEPLOYMENT_NAME
+        ports:
+        - containerPort: $DEPLOYMENT_PORT
+          protocol: TCP
+        resources:
+          limits:
+            cpu: $DEPLOYMENT_RESOURCES_LIMITS_CPU
+            memory: $DEPLOYMENT_RESOURCES_LIMITS_MEM
+          requests:
+            cpu: $DEPLOYMENT_RESOURCES_REQUESTS_CPU
+            memory: $DEPLOYMENT_RESOURCES_REQUESTS_MEM
+      imagePullSecrets:
+        - name: $REGISTRY_ADDR
+"
+

@@ -1,0 +1,58 @@
+@use '/src/assets/sass/mixins';
+
+.bank-confirm{
+    @include mixins.flex($justify: center,$align:center,$direction:column);
+    .card{
+        width: 80%;
+        ul{
+            padding: 0;
+            li{
+                padding: 5px;
+                @include mixins.flex($justify: space-between,$align:center);
+            }
+        }
+    }
+}
+.document-form{
+    padding: 0;
+    max-width:600px ;
+    line-height: 30px;
+    h2{
+        margin-top: 30px;
+    }
+}
+.training-form{
+    max-width:600px ;
+}
+.success-page{
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    @media screen and (min-width:768px) {   
+        padding-top: 80px;
+    }
+    .success-logo{
+        background-image: url("/assets/images/success-logo.svg");
+        width: 236px;
+        height: 172px;
+        background-repeat: no-repeat;
+        margin: 20px auto;
+    }
+    .commission{
+        margin-top: 15px;
+        cursor: pointer;
+        color: var(--accent-color);
+    }
+}
+.rules-form{
+    width: 100%;
+    @media screen and (min-width:768px) {
+        @include mixins.flex($justify:space-between , $align:center) ;
+    }
+    .ant-form-item-control{
+        max-width: 400px;
+    }
+    .ant-radio-group{
+        @include mixins.flex($justify:space-between ,$direction:column) ;
+    }
+}

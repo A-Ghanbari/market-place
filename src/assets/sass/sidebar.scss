@@ -1,0 +1,110 @@
+.sidebar{
+    background-color: var(--sidebar-background-color) !important;
+    box-shadow: 0 0 15px 1px #F86A95 !important;
+    z-index: 30;
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    bottom: 32px;
+    border-radius: 20px;
+    transition: all 0.5s !important;
+    @media screen and(max-width:767px) {
+        display: none;
+    }
+    @media screen and(min-width:2800px) {
+        right: 20%;
+    }
+    .sidebar-header {
+        margin: 50px auto 80px;
+        .sidebar-logo {
+            margin: 0 auto !important;
+            transition: all 0.5s !important;
+            background-image: url("/assets/images/sidebar-logo.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 95px;
+            width: 95px;
+            height: 30px !important;
+        }
+        p{
+            font-size: 14px;
+            color: #fff ;
+            text-align: center;
+            max-height: 22px;
+        }
+        .collapse-icon{
+            transition: all 0.5s !important;
+            margin: 0 auto;
+            text-align: center;
+            width: 95px;
+            height: 26px;
+            background-color: #F996AE;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .logout{
+            max-width: 100px;
+            cursor: pointer;
+            margin: 36px auto ;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ffffff;
+            border-radius: 20px;
+            h3{
+                display: inline-block;
+                margin: 0 8px;
+                color: var(--sidebar-text-hover-color);
+            }
+            svg{
+                vertical-align: middle;
+            }
+        }
+    }
+    .sidebar-header-close{
+        margin: 50px auto 80px;
+        .sidebar-logo{
+            transition: all 0.5s !important;
+            margin: 0 auto !important;
+            background-image: url("/assets/images/sidebar-logo-close.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 27px;
+            width: 27px;
+            height: 27px !important;
+        }
+        p{
+           visibility: hidden;
+           max-height: 22px;
+        }
+        .collapse-icon{
+            transition: all 0.5s !important;
+            margin: 0 auto;
+            text-align: center;
+            width: 31px;
+            height: 26px;
+            background-color: #F996AE;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .logout{
+            max-width: 40px;
+            cursor: pointer;
+            margin: 36px auto ;
+            text-align: center;
+            border-radius: 20px;
+            h3{
+                display: none;
+            }
+        }
+    }
+}
+.open-sidebar{
+    width: 230px !important; 
+    min-width: 230px !important;
+}
+.close-sidebar{
+    width: 75px !important; 
+    min-width: 75px !important;
+}

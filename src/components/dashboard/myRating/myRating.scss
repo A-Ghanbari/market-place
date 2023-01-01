@@ -1,0 +1,66 @@
+@use '/src/assets/sass/mixins';
+
+.positive-score{
+    @include mixins.flex($justify: space-between, $align: center,$direction:column);
+    h2{
+        margin-top: -30px;
+    }
+}
+
+.rate-icon{
+    @include mixins.flex($justify:space-between, $align: center);
+    width: 80%;
+    text-align: center;
+    margin: 5px auto;
+    h3{
+        min-width: 20%;
+        margin: 0;
+    }
+    @media screen and (max-width:450px) {
+        .ant-progress {
+            width: 10% !important;
+        }
+        .ant-progress-inner{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width:450px) {
+    
+    .icon-1{
+        svg,.ant-progress-text{
+            color: #3dc3a2 !important;
+        }   
+    }
+    .icon-2{
+        svg,.ant-progress-text{
+            color: #a0d468 !important;
+        }   
+    }
+    .icon-3{
+        svg,.ant-progress-text{
+            color: #f6bb42 !important;
+        }   
+    }
+    .icon-4{
+        svg,.ant-progress-text{
+            color: #fc6e51 !important;
+        }   
+    }
+    .icon-5{
+        svg,.ant-progress-text{
+            color: #da4453 !important;
+        }   
+    }
+}
+
+.switch-rate{
+    @include mixins.flex($justify:center, $align: center);
+    h3{
+        margin: 0;
+    }
+    .ant-row {
+        margin-top: 25px;
+        max-width: 60px;
+    }
+}

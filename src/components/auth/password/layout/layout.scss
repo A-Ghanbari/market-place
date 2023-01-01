@@ -1,0 +1,116 @@
+@use '/src/assets/sass/mixins';
+
+.pass-layout-wrapper{
+    @include mixins.flex($align: center,$direction:column,$justify:space-between);  
+    height: 100vh;
+    .pass-header{
+        background-image: url("/assets/images/logo.png");
+        background-size: cover;
+        width: 99px;
+        height: 53px;
+        background-repeat: no-repeat;
+        margin-top:50px ;
+    }
+    .pass-form-card{
+        @include mixins.flex($align: center,$direction:column,$justify:space-between);  
+            padding-top: 60px;
+            @media screen and (max-width: 992px){
+                padding: 0 ;
+            }
+            margin: 0 auto 70px !important;
+            h2{
+                margin-bottom: 30px;
+            }
+            .forget-pass-form{
+                @media screen and (max-width: 992px){
+                    padding: 0 30px ;
+                    width: fit-content !important;
+                }
+                    direction: ltr !important;
+                    max-width: 465px;         
+                    @include mixins.flex(
+                    $direction: column,
+                    $justify: space-between,
+                    $align: center
+                );
+                .input {
+                    direction: ltr !important;
+                    padding-left: 40px !important;
+                    margin: 5px !important;
+                }
+                .ant-input{
+                    direction: ltr !important;
+                    padding: 0 ;
+                }
+                @media screen and (min-width: 992px){
+                    width: 465px;
+                }
+                .button {
+                    width: 200px;
+                    height: 50px;
+                    margin-top: 30px ;
+                }
+                p{
+                    margin:50px 0 0;
+                }
+                .ant-form-item-label{
+                    display: none;
+                }
+            }
+    }
+    .pass-footer{
+        background-color: #F5F7FA;
+        width: 100vw;
+        direction: rtl;
+        padding: 15px;
+        .main-footer{
+            margin: 0 auto;
+            max-width: 710px;
+            padding: 10px;
+            @include mixins.flex($align: center,$justify:space-between);  
+            flex-wrap: wrap;
+            &:nth-child(1){
+                border-bottom: 1px solid #E6E9ED;
+            }
+            .email , .tell{
+                position: relative;
+                padding-left: 22px;
+                &::before{
+                    position: absolute;
+                    top: -4px;
+                    left: 0;
+                    font-size: 20px;
+                    color: var(--fail-color);
+                }
+            }
+            .email::before{
+                content: "\2709";
+            }
+            .tell::before{
+                content: "\260F";
+            }
+            h3{
+                padding-left: 16px;
+                border-left: 1px solid #000;
+            }
+        }
+    }
+    .success-icon{
+        @include mixins.flex($align: center,$justify:center);  
+        font-size: 40px;
+        color: #57cfb1;
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        margin-top: -150px;
+        border: 1px solid #5dbda51a;
+        border-radius: 50%;
+        background-color: #57cfb11a;
+        box-sizing: border-box;
+        &::before{
+            content: "\2714";
+            font-size: 1.7em;
+            height: 85px;
+        }
+    }
+}

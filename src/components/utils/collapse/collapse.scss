@@ -1,0 +1,21 @@
+.ant-collapse {
+    position: relative;
+    border: none !important;
+    padding: 8px;
+    width: 100% !important;
+    .ant-collapse-header {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        font-size: 1.2em;
+    }
+    .ant-collapse-item {
+        border: none;
+    }
+    .ant-collapse-content{
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+    }
+    .button {
+        margin: 0 auto;
+    }
+}

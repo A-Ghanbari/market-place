@@ -1,0 +1,28 @@
+printf "
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: $DEPLOYMENT_NAME
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: $CLUSTERISSUERS
+    nginx.ingress.kubernetes.io/from-to-www-redirect: 'true'
+spec:
+  tls:
+  - hosts:
+    - $DEPLOYMENT_URL
+    - www.$DEPLOYMENT_URL
+    secretName: $DEPLOYMENT_URL-cert
+  rules:
+  - host: $DEPLOYMENT_URL
+    http:
+      paths:
+      - backend:
+          service: 
+            name: $DEPLOYMENT_NAME
+            port: 
+              number: $DEPLOYMENT_PORT
+        path: /
+        pathType: Prefix
+"

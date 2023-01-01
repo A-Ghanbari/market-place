@@ -1,0 +1,18 @@
+@use '/src/assets/sass/mixins';
+
+.ant-modal-mask{
+    background-color: #000000c7 !important;
+}
+.ant-modal{
+    width: 90vw !important;
+}
+.ant-modal-content{
+    background-color: var(--section-background-color) !important;
+    border: 1px solid var(--fail-color) !important;
+    border-radius: 20px !important;
+}
+.ant-modal-footer{
+    border: none !important;
+    @include mixins.flex($justify: space-between,$align:center);
+    flex-wrap: wrap;
+}

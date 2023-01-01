@@ -1,0 +1,31 @@
+@use '/src/assets/sass/mixins';
+.card {
+    @include mixins.flex($direction: column);
+    position: relative;
+    height: 100%;
+    border-radius: 20px !important;
+    box-shadow: 0 0 12px 0 #ffbbd050;
+    background-color: #fff;
+    width: 100%;
+    .ant-card-head {
+        text-align: center;
+        color: var(--secondary-font-color) !important;
+        font-size: 17px !important;
+        h1,h2,h3,h4,h5,h6{
+            margin-bottom: 0;
+        }
+    }
+    .ant-card-body {
+        padding: 20px 16px !important;
+        color: var(--font-color) !important;
+        height: 100% !important;
+    }
+    .ant-card-actions {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 0 24px !important;
+    }
+    .ant-card-head-title{
+        overflow: visible !important;
+    }
+}

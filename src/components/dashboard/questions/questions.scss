@@ -1,0 +1,18 @@
+@use '/src/assets/sass/mixins';
+
+.question{
+    row-gap: 0 !important;
+    .aside  .ant-row{
+        @media (max-width:767px) {
+            row-gap: 0 !important;
+        }
+    }
+}
+.questions-filter{
+    @include mixins.flex($justify: flex-start, $align: center);
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    h4{
+        margin: 0 0 0 10px;
+    }
+}

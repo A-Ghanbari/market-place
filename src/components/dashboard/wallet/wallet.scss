@@ -1,0 +1,64 @@
+@use '/src/assets/sass/mixins';
+
+.wallet-credit{
+    @include mixins.flex($justify: space-between);
+    flex-wrap: wrap;
+    .wallet-balance{
+        border-radius: 8px;
+        border: 1px solid #e6eaef;
+        background-color: #f9fafc;
+        padding: 16px 20px;
+        @media screen and (max-width:930px) {   
+            margin: 30px auto;
+        }
+        @include mixins.flex($justify: space-between, $align: center,$direction:column);
+        height: 130px;
+
+    }
+    .wallet-actions{
+        @media screen and (max-width:930px) {   
+            margin: 30px auto;
+        }
+        @include mixins.flex($justify: space-between, $direction:column);
+        .button{
+            margin: 4px;
+        }
+    }
+}
+.wallet-amount{
+    @include mixins.flex($justify: space-between, $align: center);
+    flex-wrap: wrap;
+    @media screen and (max-width:930px) {   
+        margin: 0 auto;
+    }
+    div{
+        margin: 0 16px;
+        @include mixins.flex($justify: space-between,$direction:column);
+        height: 144px;
+        border-radius: 10px;
+        padding: 8px;
+        max-width: 310px;
+        @media screen and (max-width:563px) {   
+            margin: 0 auto;
+        }
+    }
+}
+.deposit{
+    h1{
+        color: var(--success-color);
+    }
+}
+.cost{
+    h1{
+        color: var(--fail-color);
+    }
+}
+.withdrawal{
+    h1{
+        color: var(--accent-color);
+    }
+}
+
+.wallet-tabs{
+    margin-top: 20px;
+}

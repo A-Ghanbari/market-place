@@ -1,0 +1,55 @@
+.table {
+    margin-bottom: 20px !important;
+    thead tr th{
+        text-align: center !important;
+        background-color: var(--content-background-color) !important ;
+        color: var(--secondary-font-color) !important;
+        // font-weight: bold;
+        max-height: 57px !important;
+        font-size: 15px !important;
+        &:first-child{
+            border-top-right-radius: 10px !important;
+            border-bottom-right-radius: 10px !important;
+        }
+        &:last-child{
+            border-top-left-radius: 10px !important;
+            border-bottom-left-radius: 10px !important;
+        }
+    }
+    .ant-table-measure-row{
+        display: none ;
+    }
+    tr{
+        td{
+            padding: 16px 8px ;
+            white-space: nowrap;
+        }
+        td , th{
+            transition: none !important;
+            text-align: center;
+            color: var(--table-text-color);
+            font-size: 12px;
+            font-weight: 500;
+        }
+        th {
+            max-width: 100px !important;
+            white-space: pre-wrap;
+        }
+    }
+    .ant-table-footer{
+        border:none !important ;
+    }
+}
+.ant-table-tbody>tr .ant-table-wrapper:only-child .ant-table.ant-table-rtl {
+     margin: 0 !important; 
+}
+.ant-table-row-expand-icon:active,.ant-table-row-expand-icon:focus, .ant-table-row-expand-icon:hover {
+    color: var(--fail-color) !important;
+}
+.ant-checkbox-indeterminate .ant-checkbox-inner:after {
+    background-color: var(--success-color) !important;
+}
+.table-title{
+    min-width: 150px !important;
+    white-space: pre-wrap !important;
+}

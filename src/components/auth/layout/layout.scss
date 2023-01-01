@@ -1,0 +1,155 @@
+@use '/src/assets/sass/mixins';
+
+.auth-layout-wrapper{
+    @media screen and (min-width: 768px){
+        display: flex;
+        height: 100vh;
+    }
+    direction: rtl;
+    align-items: stretch;
+    overflow: hidden;
+    .aside{
+        background-color: #F5F7FA;
+        text-align: center;
+        padding: 20px 15px;
+        @media screen and (min-width: 768px){
+            border-bottom-left-radius: 120px;
+            padding-top: 55px ;
+            width: 480px ;
+            min-width: 480px;
+        }
+        .auth-aside-header{
+            background-image: url("/assets/images/logo.png");
+            background-size: cover;
+            width: 99px;
+            height: 53px;
+            background-repeat: no-repeat;
+            margin: 0 auto 40px;
+
+        }
+        .login-aside-main{
+            background-image: url("/assets/images/warehouse.svg");
+            width: 336px;
+            height: 377px;
+            background-repeat: no-repeat;
+            margin-top: 70px ;
+            background-position: center;
+            margin-right: 60px; 
+            overflow: hidden;
+            @media screen and (max-width: 767px){
+                display: none;
+            }
+        }
+        .signup-aside-main{
+            max-width: 300px;
+            margin: 40px auto;
+            @media screen and (max-width: 767px){
+                display: none !important;
+            }
+        }
+        h5{
+            @media screen and (max-width: 767px){
+                display: none;
+            }
+            position: absolute;
+            bottom: 15px;
+            right: 130px;
+        }
+    }
+    .main {
+        flex-grow: 1;
+        @include mixins.flex($justify:space-between,$direction:column);    
+        @media screen and (max-width: 992px){
+            @include mixins.flex($justify: space-between,$direction:column);
+        }
+        @media screen and (min-width: 768px){
+            overflow-y: scroll;
+        }
+        .auth-form-card {
+            @media screen and (min-width: 768px){
+                padding-top: 100px;
+            }
+            padding: 20px 50px;
+            .signup-form ,.login-form{
+                padding-top: 100px;
+                margin: auto !important;
+                @media screen and (max-width: 992px){
+                    padding: 0;
+                    width: fit-content !important;
+                }
+                    direction: ltr !important;
+                    max-width: 465px;         
+                    @include mixins.flex(
+                    $direction: column,
+                    $justify: space-between,
+                    $align: center
+                );
+                .input {
+                    direction: ltr !important;
+                    padding-left: 40px !important;
+                    margin: 5px !important;
+                }
+                .ant-input{
+                    direction: ltr !important;
+                    padding: 0 ;
+                }
+                @media screen and (min-width: 992px){
+                    width: 465px;
+                }
+                .button {
+                    width: 200px;
+                    height: 50px;
+                    margin: 0 ;
+                }
+                p{
+                    margin:50px 0 0;
+                }
+                .ant-form-item-label{
+                    display: none;
+                }
+            }
+            .info-text{
+                background-color:#FAFBFC ;
+                padding: 10px;
+                margin: 30px 0;
+                direction: rtl;
+            }
+        }
+        .auth-footer{
+            padding: 10px 0 20px;
+            @include mixins.flex($justify: center);
+            margin-top: 30px;
+            flex-wrap: wrap;
+            a{
+               font-size: 10px;
+               color: #000;
+                padding:0 15px;
+                border-right: 1px solid #eee;
+                &:nth-child(1){
+                    border: none;
+                }
+            }
+        }
+        .footer-aside{
+            background-color: #F5F7FA;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+            @media screen and (min-width: 768px){
+                display: none;
+            }
+            .md-aside-step{
+                max-width: 300px;
+                margin: 40px auto;
+                padding: 20px;
+            }
+            .login-aside-main{
+                img{
+                width: 60%;
+                height: auto;
+                }
+                margin: 40px 0 ;
+            }
+        }
+    }
+}

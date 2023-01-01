@@ -1,0 +1,115 @@
+@use '/src/assets/sass/mixins';
+
+.content-find{
+    .find-search{
+        @include mixins.flex($justify: space-between);
+        @media (max-width:450px) {
+            flex-wrap: wrap;
+        }
+        .button{
+            margin-right: 10px;
+            height: 50px;
+            @media (max-width:450px) {
+                margin: 0 auto;
+            }
+        }
+    }
+    .ant-checkbox-wrapper{
+        display: flex !important;
+    }
+    .selected-filters{
+        .create-product{
+            border-top: 1px solid #888;
+            margin-top: 16px;
+            padding-top: 16px;
+            @include mixins.flex($justify: space-between , $align:center);
+        }
+    }
+}
+.product-list{
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    .product-title{
+        @include mixins.flex($justify: space-between , $align:center);
+        flex-wrap: wrap;
+        div{
+            @include mixins.flex($justify: space-between , $align:center);
+        }
+        img{
+            margin-left: 30px;
+        }
+    }
+    .product-info{
+        @include mixins.flex($justify: space-between , $align:center);
+        flex-wrap: wrap;
+        @media (max-width:500px) {
+            flex-direction: column;
+        }
+        margin-top: 15px;
+        padding: 9px 20px;
+        border-radius: 4px;
+        background-color: #f9fafc;
+    }
+}
+.create-product{
+    .ant-steps-item-title{
+        width: 100%;
+        
+        .ant-collapse-icon-position-right>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow{
+            left: 0 !important;
+            right: auto;
+        }
+    }
+    .ant-collapse-header{
+        display: block !important;
+        h4{
+            margin-top: -8px !important;
+        }
+    }
+    .ant-collapse-icon-position-right>.ant-collapse-item>.ant-collapse-header{
+        padding-right: 0 !important;
+    }
+    .collapse-header{
+        @include mixins.flex($align:center);
+        h4{
+            min-width: 150px;
+        }
+        .collapse-line{
+            border: 1px solid #eee;
+            height: 1px;
+            width: 100%;
+            margin-left: 32px;
+            flex-grow: 1;
+        }
+    }
+}
+.variant-title{
+    @include mixins.flex($justify: flex-start,$align:center);
+    margin: 16px 0;
+    img{
+        margin-left: 16px;
+    }
+}
+.variant-info{
+    height: 100% !important;
+}
+.color-box{ 
+    cursor: pointer;
+    div{
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid rgb(218, 218, 218);
+    }
+    @media (max-width:767px) {
+        span{
+            display: none;
+        }
+    }
+}
+.card-color{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid rgb(218, 218, 218);
+}

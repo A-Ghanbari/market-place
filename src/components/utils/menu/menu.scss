@@ -1,0 +1,159 @@
+@use '/src/assets/sass/mixins';
+
+.sidebar-menu {
+    width: fit-content !important;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    background-color: #00000000 !important;
+    transition: all 0.5s !important;
+    .ant-menu-item-group-title {
+        display: none;
+    }
+    
+    .sidebar-content {
+        position: absolute;
+        @media (max-width:767px) {
+            top: 250px;
+        }
+        top: 350px;
+        bottom: 10px;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .ant-menu-submenu {
+            position: relative;
+            .ant-menu-item{
+                padding-left: 10px !important;
+            }
+        }
+        .ant-menu-submenu-title {
+            color: var(--sidebar-text-color);
+            font-size: 16px;
+            svg{
+                vertical-align: middle !important;
+                margin-left: 10px !important;
+            }
+            .ant-menu-submenu-arrow {
+                &::after,
+                &::before {
+                    background-color: var(--sidebar-text-color) !important;
+                }
+            }
+            &:hover {
+                .ant-menu-submenu-arrow {
+                    &::after,
+                    &::before {
+                        background-color: var(
+                            --sidebar-text-hover-color
+                        ) !important;
+                    }
+                }
+            }
+        }
+
+        .ant-menu-submenu-selected {
+            .ant-menu-submenu-title{
+                color: var(--sidebar-text-active-color) !important;
+                svg path{
+                    stroke: var(--sidebar-text-active-color) !important;
+                }
+            }
+            .ant-menu-submenu-arrow {
+                &::after,
+                &::before {
+                    background-color: var(
+                        --sidebar-text-active-color
+                    ) !important;
+                }
+            }
+            .anticon {
+                color: var(--sidebar-text-active-color) !important;
+            }
+        }
+        .sidebar-menu-item {
+            font-size: 15px;
+            a {
+                color: var(--sidebar-text-color) !important;
+            }
+            margin: 0 !important;
+            max-height: 32px;
+            background-color: var(--sidebar-background-color) !important;
+        }
+        .ant-menu-item-selected {
+            a {
+                color: #fff !important;
+                svg path{
+                    stroke: var(--sidebar-text-active-color) !important;
+                }
+            }
+        }
+    }
+    .ant-menu-item-selected{
+        padding-right: 21px ;
+    }
+    .sidebar-menu-dashboard {
+        background-color: var(--sidebar-background-color) !important;
+        color: var(--sidebar-text-color) !important;
+        font-size: 16px;
+        a {
+            color: var(--sidebar-text-color) !important;
+        }
+    }
+    .sidebar-menu-dashboard {
+        position: relative;
+        .ant-menu-item-icon svg{
+            vertical-align: middle !important;
+        }
+    }
+}
+.ant-menu-sub {
+    background: var(--sidebar-background-color) !important;
+}
+.ant-menu-title-content a {
+    color: var(--sidebar-text-color) !important;
+}
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) :hover {
+    @media (pointer: fine) {
+        color: var(--sidebar-text-hover-color) !important;
+    }
+}
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #00000000 !important;
+    border-right: 3px solid var(--sidebar-text-active-color);
+    a {
+        color: var(--sidebar-text-active-color) !important;
+    }
+        svg{
+            color: var(--sidebar-text-active-color) !important;
+        }
+}
+.close-sidebar {
+    .sidebar-menu-dashboard{
+        span{
+            display: none  !important;
+        }
+    }
+    .ant-menu-title-content{
+        display: none !important;
+    }
+    @media screen and (min-width: 768px) {
+        .ant-menu-item-icon {
+            width: 22px !important;
+        }
+    }
+    .ant-menu-item-selected{
+        padding-right: 24px !important;
+        svg path{
+            stroke: var(--sidebar-text-active-color) !important;
+        }
+    }
+    .ant-menu-submenu-selected {
+        .ant-menu-submenu-title{
+            padding-right: 24px !important;
+            border-right: 3px solid var(--sidebar-text-active-color) !important;
+            svg path{
+                stroke: var(--sidebar-text-active-color) !important;
+            }
+        }
+    }
+}
