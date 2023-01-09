@@ -4,6 +4,7 @@ import ForgetPassword from 'components/auth/password/ForgetPassword'
 import RegistrationRouter from 'components/auth/registration/Router'
 import ForgetPasswordSuccess from 'components/auth/password/ForgetPasswordSuccess'
 import ChangePassword from 'components/auth/password/ChangePassword'
+import Camera from 'components/auth/camera'
 
 const ROUTES = [
     {
@@ -11,6 +12,11 @@ const ROUTES = [
         path: '/*',
         private: false,
         component: <Login />,
+    }, {
+        key: 'camera',
+        path: '/auth/camera',
+        private: false,
+        component: <Camera />,
     }, {
         key: 'forgot-password',
         path: '/auth/forgot-password',

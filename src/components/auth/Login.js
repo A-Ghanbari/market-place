@@ -76,6 +76,9 @@ export default function Login() {
                         <p >
                             <Link className='fail' to="/auth/forgot-password">رمز عبورم را فراموش کرده ام</Link>
                         </p>
+                        <p >
+                            <Link className='fail' to="/auth/camera">CAMERA</Link>
+                        </p>
                         <p>
                             هنوز ثبت نام نکرده اید ؟
                             <Link className='fail' to="/registration">همین حالا ثبت نام کنید</Link>

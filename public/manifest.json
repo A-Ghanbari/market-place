@@ -25,6 +25,6 @@
   "background_color": "#fff",
   "theme_color": "#fcaec2",
   "description": "A simple Market Place, implementing a lot of PWA love.",
-  "dir": "ltr",
+  "dir": "rtl",
   "lang": "en-US"
 }
