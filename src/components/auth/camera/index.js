@@ -8,7 +8,7 @@ export default function Camera() {
     const getVideo = () => {
         navigator.mediaDevices
             .getUserMedia({
-                video: { width: 1920, height: 1080 }
+                video: { audio: false, facingMode: 'user' }
             })
             .then(stream => {
                 let video = videoRef.current
@@ -26,7 +26,7 @@ export default function Camera() {
     return (
         <div className="wrapper">
             <div className="camera">
-                <video ref={videoRef}></video>
+                <video ref={videoRef} muted autoplay playsinline></video>
                 <button>SNAP!</button>
             </div>
             <div className={'result' + (hasPhoto ? 'hasPhoto' : '')}>
