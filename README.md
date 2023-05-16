@@ -1,5 +1,7 @@
-Shavaz market place
+<h1>Shavaz market place<h1>
+  
 project online demo : https://market-place-ecru.vercel.app/
+  
 ![1](https://github.com/A-Ghanbari/market-place/assets/87820498/5c49712e-d971-4996-9db5-0db5768afb45)
 ![2](https://github.com/A-Ghanbari/market-place/assets/87820498/951bdd4d-1a95-4e3d-9076-3e5f70873a22)
 ![3](https://github.com/A-Ghanbari/market-place/assets/87820498/3747b0c6-5424-4308-a467-e5d9e0d1d446)
