@@ -7,10 +7,10 @@ import { getSupplierSalesList } from "store/actions/product"
 
 export default function Product() {
     const [filters, setFilters] = useState()
-    useEffect(() => {
-        filters && getSupplierSalesList(`PageIndex=${filters.pageIndex}
-        &PageSize=${filters.pageSize}`)
-    }, [filters])
+    // useEffect(() => {
+    //     filters && getSupplierSalesList(`PageIndex=${filters.pageIndex}
+    //     &PageSize=${filters.pageSize}`)
+    // }, [filters])
 
 
     return (

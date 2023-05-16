@@ -6,12 +6,12 @@ export default function RenderRoutes({ routes }) {
     return (
         <Routes>
             {routes.map(route => (
-                (route.private) ?
-                    <Route
-                        key={route.key}
-                        path={route.path}
-                        element={<PrivateRoute>{route.component}</PrivateRoute>}
-                    /> :
+                // (route.private) ?
+                //     <Route
+                //         key={route.key}
+                //         path={route.path}
+                //         element={<PrivateRoute>{route.component}</PrivateRoute>}
+                //     /> :
                     <Route
                         key={route.key}
                         path={route.path}

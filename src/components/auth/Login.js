@@ -21,23 +21,24 @@ export default function Login() {
     )
 
     const onFinish = (values) => {
-        login(values).then(res => {
-            if (res !== null) {
-                switch (res.registerStatus) {
-                    case 1:
-                        navigate("/registration/business-details", { state: { status: res.registerStatus, mobile: res.mobile } })
-                        break
-                    case 2:
-                        navigate("/registration/business-details", { state: { status: res.registerStatus, mobile: res.mobile } })
-                        break
-                    case 3:
-                        navigate("/registration/documents", { state: { status: res.registerStatus } })
-                        break
-                    default:
-                        break;
-                }
-            }
-        })
+        // login(values).then(res => {
+        //     if (res !== null) {
+        //         switch (res.registerStatus) {
+        //             case 1:
+        //                 navigate("/registration/business-details", { state: { status: res.registerStatus, mobile: res.mobile } })
+        //                 break
+        //             case 2:
+        //                 navigate("/registration/business-details", { state: { status: res.registerStatus, mobile: res.mobile } })
+        //                 break
+        //             case 3:
+        //                 navigate("/registration/documents", { state: { status: res.registerStatus } })
+        //                 break
+        //             default:
+        //                 break;
+        //         }
+        //     }
+        // })
+        navigate('/dashboard')
     }
 
     return (
@@ -75,9 +76,6 @@ export default function Login() {
                             htmlType='submit' />
                         <p >
                             <Link className='fail' to="/auth/forgot-password">رمز عبورم را فراموش کرده ام</Link>
-                        </p>
-                        <p >
-                            <Link className='fail' to="/auth/camera">CAMERA</Link>
                         </p>
                         <p>
                             هنوز ثبت نام نکرده اید ؟

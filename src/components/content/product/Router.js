@@ -7,19 +7,19 @@ const ROUTES = [
     {
         key: 'product',
         path: '/*',
-        private: true,
+        private: false,
         component: <Product />,
     },
     {
         key: 'variant',
         path: '/variant/:ID',
-        private: true,
+        private: false,
         component: <Variant />,
     },
     {
         key: 'edit',
         path: '/edit/:ID',
-        private: true,
+        private: false,
         component: <Edit />,
     }
 ]

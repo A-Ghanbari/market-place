@@ -11,14 +11,14 @@ function PrivateRoute({ children }) {
     // const path = cutString(location.pathname, 1, location.pathname.length)
     // const hasPageAccess = usePageAccess(path)
 
-    if (isAuth) {
+    // if (isAuth) {
         // if (hasPageAccess) {
         return children
         // } else {
         // return <Dashboard />
         // }
-    }
-    return <AuthRouter />
+    // }
+    // return <AuthRouter />
 }
 
 export default PrivateRoute

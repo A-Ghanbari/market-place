@@ -8,22 +8,22 @@ const ROUTES = [
     {
         key: 'find',
         path: '/find',
-        private: true,
+        private: false,
         component: <Find />,
     }, {
         key: 'product',
         path: '/product/*',
-        private: true,
+        private: false,
         component: <ProductRouter />,
     }, {
         key: 'product-config',
         path: '/product-config',
-        private: true,
+        private: false,
         component: <ProductConfig />,
     }, {
         key: 'create',
         path: '/create',
-        private: true,
+        private: false,
         component: <Create />,
     },
 ]

@@ -15,25 +15,25 @@ const ROUTES = [
     {
         key: 'dashboard',
         path: '/*',
-        private: true,
+        private: false,
         component: <DashboardRouter />,
     },
     {
         key: 'content',
         path: '/content/*',
-        private: true,
+        private: false,
         component: <ContentRouter />,
     },
     {
         key: 'order',
         path: '/order/*',
-        private: true,
+        private: false,
         component: <OrderRouter />,
     },
     {
         key: 'consignment',
         path: '/consignment/*',
-        private: true,
+        private: false,
         component: <ConsignmentRouter />,
     }
 ]

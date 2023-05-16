@@ -14,7 +14,7 @@ const ROUTES = [
     }, {
         key: 'panel',
         path: '/*',
-        private: true,
+        private: false,
         component: <Panel />,
     }
 ]
